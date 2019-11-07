@@ -84,7 +84,10 @@ int main() {
   for (i = 1; i < n; i++) {
     if (left_max < a[i]) {
       right_subarray_count++;
-      last_max = a[i];
+
+      if(a[i]>last_max){
+            last_max = a[i];
+      }
     }
     else {
       right_subarray_count = 0;
